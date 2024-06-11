@@ -12,8 +12,8 @@ function calculateAdultYears(userAge) {
   return userAge - 18;
 }
 
-alert(calculateAdultYears(age));
+console.log(calculateAdultYears(age));
 
 age = 45;
-calculateAdultYears();
-alert(adultYears);
+adultYears = calculateAdultYears(age);
+console.log(adultYears);
