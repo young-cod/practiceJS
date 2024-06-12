@@ -7,4 +7,9 @@ let anchorElement = document.getElementById("external-link");
 anchorElement = document.querySelectorAll("a");
 anchorElement.href = "https://academind.com";
 
-document.createElement("a");
+let newAnchorElem = document.createElement("a");
+newAnchorElem.href = "https://google.com";
+newAnchorElem.textContent = "Google";
+
+let firstPara = document.querySelector("p");
+firstPara.append(newAnchorElem);
