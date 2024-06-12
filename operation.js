@@ -1,9 +1,0 @@
-console.log(10 + 4);
-console.log(10 - 4);
-console.log(10 * 4);
-console.log(10 / 4);
-console.log(1 % 11);
-console.log(2 % 11);
-console.log(10 % 11);
-console.log(11 % 11);
-console.log(12 % 11);
