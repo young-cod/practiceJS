@@ -1,28 +1,10 @@
-console.dir(document);
-// document.body.children[1].children[0].href = "https://google.com";
+let paraElem = document.querySelector("p");
 
-let anchorElement = document.getElementById("external-link");
-// anchorElement.href = "https://google.com";
+function changeParaText() {
+  paraElem.textContent = "clicked";
+  console.log("paraclick");
+}
 
-anchorElement = document.querySelectorAll("a");
-anchorElement.href = "https://academind.com";
-
-//1. 요소 추가하기
-let newAnchorElem = document.createElement("a");
-newAnchorElem.href = "https://google.com";
-newAnchorElem.textContent = "Google";
-
-let firstPara = document.querySelector("p");
-firstPara.append(newAnchorElem);
-
-//2. 요소 삭제하기
-let firstH1Elem = document.querySelector("h1");
-
-//구버전에서 사용 불가
-// firstH1Elem.remove();
-
-//구버전에서 사용가능
-firstH1Elem.parentElement.removeChild(firstH1Elem);
-
-//3. 요소 이동
-firstPara.parentElement.append(firstPara);
+//함수에 ()를 달게되면 실행하게 된다.
+//이벤트가 실행될때까지 대기상태로 두려면 ()를 넣지 말아야한다.
+paraElem.addEventListener("click", changeParaText);
