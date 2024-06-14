@@ -12,7 +12,7 @@ paraElem.addEventListener("click", changeParaText);
 let inputElem = document.querySelector("input");
 
 function retrieveUserInput(event) {
-  //let enteredText = inputElem.value;
+  //   let enteredText = inputElem.value;
   let enteredText = event.target.value;
   console.log(enteredText);
   console.log(event);
