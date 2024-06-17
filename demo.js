@@ -8,6 +8,11 @@ function calcInputLength(event) {
   const remainingChar = maxAllowedChars - len;
 
   inputLen.textContent = remainingChar;
+
+  if (remainingChar <= 10) {
+    inputField.classList.add("warning");
+    inputLen.classList.add("warning");
+  }
 }
 
 inputField.addEventListener("input", calcInputLength);
