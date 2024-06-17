@@ -19,3 +19,10 @@ const loggedInUser = {
 for (const info in loggedInUser) {
   console.log(loggedInUser[info]);
 }
+
+let isFinished = false;
+while (!isFinished) {
+  isFinished = confirm("Do youn want to quit?");
+}
+
+console.log("Done!");
