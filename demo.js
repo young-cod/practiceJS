@@ -9,9 +9,17 @@ function calcInputLength(event) {
 
   inputLen.textContent = remainingChar;
 
-  if (remainingChar <= 10) {
+  if (remainingChar === 0) {
+    inputField.classList.add("error");
+    inputLen.classList.add("error");
+  } else if (remainingChar <= 10) {
     inputField.classList.add("warning");
     inputLen.classList.add("warning");
+    inputField.classList.remove("error");
+    inputLen.classList.remove("error");
+  } else {
+    inputField.classList.remove("warning");
+    inputLen.classList.remove("warning");
   }
 }
 
