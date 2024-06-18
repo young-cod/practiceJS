@@ -32,3 +32,28 @@ function highlightLinks() {
 }
 
 highlightBtn.addEventListener("click", highlightLinks);
+
+// Display User Data
+
+const dummyUserData = {
+  firstName: "YoungSub",
+  lastName: "Lee",
+  age: 30,
+};
+
+const displayUserDataBtn = document.querySelector("#user-data button");
+
+function displayUserData() {
+  const outputDataElem = document.getElementById("output-user-data");
+
+  outputDataElem.innerHTML = "";
+
+  for (const key in dummyUserData) {
+    const dataList = document.createElement("li");
+    const outputText = key.toUpperCase() + ": " + dummyUserData[key];
+    dataList.textContent = outputText;
+    outputDataElem.append(dataList);
+  }
+}
+
+displayUserDataBtn.addEventListener("click", displayUserData);
